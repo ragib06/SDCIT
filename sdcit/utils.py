@@ -45,7 +45,7 @@ def eigdec(X: np.ndarray, top_N: int = None):
     M = len(X)
 
     # ascending M-1-N <= <= M-1
-    w, v = scipy.linalg.eigh(X, eigvals=(M - 1 - top_N + 1, M - 1))
+    w, v = np.linalg.eigh(X, eigvals=(M - 1 - top_N + 1, M - 1))
 
     # descending
     return w[::-1], v[:, ::-1]
